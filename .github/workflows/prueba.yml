@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: Comprobar coincidencia de los tokens
-        shell: powershell
+        shell: powershell -NoProfile -ExecutionPolicy Bypass -File "{0}"
         env:
           DEV_TOKEN: ${{ secrets.DEV_TOKEN }}
         run: |
